@@ -20,6 +20,7 @@
       --red-color: rgb(255,63,63);
       --light-gray-color: rgb(213,213,213);
       --light-white-color: rgb(250,250,250);
+      --black-color: rgb(43,43,43);
 
       --primary-font: 'Montserrat', sans-serif;
     }
@@ -140,6 +141,7 @@
     /*our-values-container*/
     .our-values-container {
       width: min(100%, 37.5rem); /*width equals 100% of its parent width until width = 37.5rem, aka 600px*/
+      margin: 0rem auto 0rem auto;
       text-align: center;
     }
 
@@ -152,6 +154,9 @@
 
       font-weight: 600;
       background-color: var(--light-gray-color);
+
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
     }
 
     .our-values-1-container {
@@ -205,6 +210,69 @@
       border-color: var(--blue-color);
     }
 
+    /*weekly-strategy-report-container*/
+    .weekly-strategy-report-container {
+      width: 350px;
+      margin: 0rem auto 0rem auto;
+      /*
+      375px = 370px + margin: 0rem auto 0rem auto, so (2.5px + 2.5px)
+      */
+    }
+
+    #weekly-strategy-report-title {
+      width: auto;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      /*
+      350px = width: auto, so (334px) + (8px + 8px) + 0px + 0px
+      */
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+
+      text-align: center;
+      font-weight: 600;
+      background-color: var(--light-gray-color);
+
+      font-size: 20px;
+    }
+
+    .weekly-strategy-report-1,
+    .weekly-strategy-report-2,
+    .weekly-strategy-report-3 {
+      background-color: var(--black-color);
+      color: var(--light-white-color);
+
+      width: auto;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .weekly-strategy-report-1,
+    .weekly-strategy-report-2 {
+      margin-bottom: 1rem;
+    }
+
+    .weekly-report-image {
+      display: block;
+      width: 70%;
+      margin: 0rem auto 0rem auto;
+
+      margin-bottom: 1rem;
+    }
+
+    .weekly-report-heading {
+      width: auto;
+      padding: 0rem 1rem 0rem 1rem;
+
+      
+      margin-bottom: 0.8rem;
+    }
+
+    .weekly-report-author {
+      width: auto;
+      padding: 0rem 1rem 0rem 1rem;
+      /*334px = width: auto, so (302px) + (16px + 16px) + 0px + 0px*/
+
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -251,23 +319,23 @@
   </section>
 
   <section class="weekly-strategy-report-section">
-    <div>
-      <h2>Weekly Strategic Report Preview</h2>
+    <div class="weekly-strategy-report-container">
+      <h2 id="weekly-strategy-report-title">Weekly Strategic Report Preview</h2>
 
       <div class="weekly-strategy-report-1">
-        <img src="images/ukraine-image.png">
-        <h4>The Responses of US and China towards the Russia Invasion of Ukraine</h4>
-        <p>By Anne Lee</p>
+        <img class="weekly-report-image" src="images/ukraine-image.png">
+        <h4 class="weekly-report-heading">The Responses of US and China towards the Russia Invasion of Ukraine</h4>
+        <p class="weekly-report-author">By Anne Lee</p>
       </div>
       <div class="weekly-strategy-report-2">
-        <img src="images/energy-image.png">
-        <h4>Beijing's Commitment to the Planet</h4>
-        <p>By: Dominic Nozzarella</p>
+        <img class="weekly-report-image" src="images/energy-image.png">
+        <h4 class="weekly-report-heading">Beijing's Commitment to the Planet</h4>
+        <p class="weekly-report-author">By: Dominic Nozzarella</p>
       </div>
       <div class="weekly-strategy-report-3">
-        <img src="images/map-image.jpeg">
-        <h4>The Politics of Energy: The BRI's Role in Energy Development</h4>
-        <p>By: Andrew J. Harding</p>
+        <img class="weekly-report-image" src="images/map-image.jpeg">
+        <h4 class="weekly-report-heading">The Politics of Energy: The BRI's Role in Energy Development</h4>
+        <p class="weekly-report-author">By: Andrew J. Harding</p>
       </div>
     </div>
   </section>
