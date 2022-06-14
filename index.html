@@ -7,14 +7,104 @@
 
   <script src="https://kit.fontawesome.com/c6ff8bd574.js" crossorigin="anonymous"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <title>USCSSO</title>
+
+  <style>
+
+    :root {
+      --blue-color: rgb(0,40,104);
+      --red-color: rgb(255,63,63);
+      --light-gray-color: rgb(213,213,213);
+      --light-white-color: rgb(250,250,250);
+
+      --primary-font: 'Montserrat', sans-serif;
+    }
+
+    body {
+      font-family: var(--primary-font);
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 0px;
+    }
+
+    video {
+      width: 50px;
+    }
+
+    .navigation-container {
+      width: auto;
+      padding: 1rem 2rem 1rem 1rem;
+      /* 
+      Parent Div's Width = Child Div's Width+Padding+Border+Margin
+      375px = width: auto, so (327px) + (48px) + 0px + 0px
+      */
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      background-color: var(--light-white-color);
+
+      border-bottom-style: solid;
+      border-bottom-color: var(--blue-color);
+      border-bottom-width: 0.3rem;
+      
+    }
+
+    .website-title-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    #uscsso-title {
+      font-size: 27px;
+      color: var(--blue-color);
+      font-weight: 400;
+    }
+    
+    #uscsso-logo {
+      width: 40px;
+    }
+
+    #hamburger-logo {
+      color: var(--red-color);
+    }
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+  </style>
 </head>
 <body>
   <nav class="navigation-top-bar">
-    <div>
-      <h1>USCSS</h1>
-      <img src="images/uscsso-logo.png">
-      <i class="fa-solid fa-bars hamburger"></i>
+    <div class="navigation-container">
+      <div class="website-title-container">
+        <h1 id="uscsso-title">USCSS</h1>
+        <img id="uscsso-logo" src="images/uscsso-logo.png">  
+      </div>
+
+      <i id="hamburger-logo" class="fa-solid fa-bars fa-xl"></i>
     </div>
   </nav>
 
@@ -90,9 +180,9 @@
 </html>
 
 <!--
-  1) Mobile First Approach
+  1) Mobile First Approach - Yes. 
   2) Create the HTML layout - Yes. 
-  3) Create the HTML elements
-  4) Decorate the HTML elements and separate them
+  3) Create the HTML elements - Yes. 
+  4) Decorate the HTML elements
   - Parent Div's Width = Child Div's Width+Padding+Border+Margin
 -->
