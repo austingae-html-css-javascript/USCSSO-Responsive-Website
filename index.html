@@ -137,6 +137,74 @@
       border-radius: 0.5rem;
     }
 
+    /*our-values-container*/
+    .our-values-container {
+      width: min(100%, 37.5rem); /*width equals 100% of its parent width until width = 37.5rem, aka 600px*/
+      text-align: center;
+    }
+
+    #our-values-title {
+      width: auto;
+      margin: 0rem 7rem 0rem 7rem;
+      /*375px = width: auto, so (151px) + 0px + 0px + 224px*/
+
+      padding: 0.5rem 0rem 0.5rem 0rem;
+
+      font-weight: 600;
+      background-color: var(--light-gray-color);
+    }
+
+    .our-values-1-container {
+      color: var(--light-white-color);
+      background-color: var(--blue-color);
+
+      padding: 1rem 1rem 1rem 1rem;
+
+      margin-bottom: 0.5rem;
+    }
+
+    .our-values-2-container {
+      color: var(--light-white-color);
+      background-color: var(--red-color);
+      padding: 1rem 1rem 1rem 1rem;
+
+      margin-bottom: 0.5rem;
+    }
+
+    .our-values-3-container {
+      color: var(--light-white-color);
+      background-color: var(--blue-color);
+      padding: 1rem 1rem 1rem 1rem;
+
+      margin-bottom: 1rem;
+    }
+
+    .our-value-header {
+      font-size: 18px;
+      font-weight: 600;
+
+      margin-bottom: 1rem;
+    }
+
+    .our-value-paragraph {
+      font-size: 14px;
+      line-height: 1.3rem;
+    }
+
+    #learn-more-button {
+      color: var(--light-white-color);
+      background-color: var(--red-color);
+      border-style: solid;
+      border-color: var(--red-color);
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      border-radius: 0.3rem;
+    }
+
+    #learn-more-button:hover {
+      background-color: var(--blue-color);
+      border-color: var(--blue-color);
+    }
+
   </style>
 </head>
 <body>
@@ -164,21 +232,21 @@
   </header>
 
   <section class="our-values-section">
-    <div>
-      <h2>Our Values</h2>
+    <div class="our-values-container">
+      <h2 id="our-values-title">Our Values</h2>
       <div class="our-values-1-container">
-        <h4>Nonpartisanship</h4>
-        <p>USCSSO is a nonpartisan organization in a highly partisan environment focused on delivering unbiased analysis of complex issues in US-China relations.</p>
+        <h4 class="our-value-header">Nonpartisanship</h4>
+        <p class="our-value-paragraph">USCSSO is a nonpartisan organization in a highly partisan environment focused on delivering unbiased analysis of complex issues in US-China relations.</p>
       </div>
       <div class="our-values-2-container">
-        <h4>Objectivity</h4>
-        <p>USCSSO aims to retain consistent objectivity by sourcing research from a wide variety of reputable locations, and refraining from the use of bias in analysis.</p>
+        <h4 class="our-value-header">Objectivity</h4>
+        <p class="our-value-paragraph">USCSSO aims to retain consistent objectivity by sourcing research from a wide variety of reputable locations, and refraining from the use of bias in analysis.</p>
       </div>
       <div class="our-values-3-container">
-        <h4>Student-Led</h4>
-        <p>USCSSO offers a platform for students to educate and become educated on the US-China relationship, while tailoring content to young professionals.</p>
+        <h4 class="our-value-header">Student-Led</h4>
+        <p class="our-value-paragraph">USCSSO offers a platform for students to educate and become educated on the US-China relationship, while tailoring content to young professionals.</p>
       </div>
-      <button>Learn More</button>
+      <button id="learn-more-button">Learn More</button>
     </div>
   </section>
 
@@ -229,4 +297,5 @@
   4) Decorate the HTML elements
   - Parent Div's Width = Child Div's Width+Padding+Border+Margin
   - Parent Div's Width = Block Element's Width+Padding+Border+Margin
+  - However, Parent Div's Width != Inline Element's Width+Padding+Border+Margin
 -->
