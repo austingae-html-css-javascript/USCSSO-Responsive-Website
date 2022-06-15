@@ -186,7 +186,7 @@
 
     /*our-values-container*/
     .our-values-container {
-      width: min(100%, 37.5rem); /*width equals 100% of its parent width until width = 37.5rem, aka 600px*/
+      width: min(100%, 75rem); /*width equals 100% of its parent width until width = 37.5rem, aka 1200px*/
       margin: 0rem auto 0rem auto;
 
       margin-top: 2rem;
@@ -396,7 +396,44 @@
       #navigation-buttons-container { /*when screen size > 768px, show #navigation-buttons-container*/
         display: flex;
       }
+
+      .about-us-container {
+      width: 650px;
+      margin: 0rem auto 0rem auto;
+      /*
+      Parent Div's Width = Child Div's Width + Padding + Border + Margin
+      768px = 650 + 0px + 0px + (59px + 59px)
+      */
     }
+
+      #us-china {
+        font-size: 40px;
+      }
+
+      #strategic-studies-org {
+        font-size: 35px;
+      }
+
+      #org-short-description {
+        font-size: 20px;
+      }
+
+      #about-us-title {
+        font-size: 30px;
+      }
+
+      #about-us-long-description {
+        font-size: 20px;
+        padding: 2rem 0rem 2rem 0rem;
+        line-height: 35px;
+      }
+    }
+
+
+
+    
+
+
   </style>
 </head>
 <body>
@@ -419,7 +456,7 @@
 
   <header class="about-us-header">
     <div class="about-us-container">
-      <h2><span id="us-china">US-CHINA</span><br><span id="strategic-studies-org">STRATEGIC STUDIES ORGANIZATION</span></h2>
+      <h2 id="us-china-sso-org-title"><span id="us-china">US-CHINA</span><br><span id="strategic-studies-org">STRATEGIC STUDIES ORGANIZATION</span></h2>
       <h4 id="org-short-description">A platform for nonpartisan, objective, and student-centered research, analysis, and discussion of Sino-American competition.</h4>
       <video id="about-us-video" controls="control" poster="images/who-we-are.png">
         <source src="videos/about-us-video.mp4" type="video/mp4">
