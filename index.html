@@ -404,6 +404,8 @@
       Parent Div's Width = Child Div's Width + Padding + Border + Margin
       768px = 650 + 0px + 0px + (59px + 59px)
       */
+
+      margin-top: 1rem;
     }
 
       #us-china {
@@ -495,6 +497,12 @@
       .about-us-container {
         width: 900px;
         margin: 0rem auto 0rem auto;
+        /*
+        Parent Div's Width = Child Div's Width + Padding + Border + Margin
+        1000px = 900px + 0px + 0px + margin: 0rem auto 0rem auto, so (50px + 50px)
+        */
+
+        margin-top: 1rem;
       }
 
       .about-us-video-title-long-description-container {
@@ -503,6 +511,8 @@
 
         align-items: center;
         justify-content: space-between;
+
+        margin-top: 3rem;
       }
 
       #about-us-video {
@@ -517,7 +527,11 @@
         line-height: 1.8rem;
       }
 
+      /*.our-values-container*/
 
+      .our-values-container {
+        margin-top: 5rem;
+      }
       .our-values-1-2-3-flex-container {
         display: flex;
         flex-direction: row;
@@ -525,11 +539,56 @@
         justify-content: space-between;
       }
 
+      #our-values-title {
+        width: 332px;
+        margin: 0rem auto 0rem auto;
+        /* 
+        Parent Div's Width = Block Element's Width + Padding + Border + Margin
+        1000px = 332px + 0px + 0px + margin: 0rem auto 0rem auto, so (334px + 334px) 
+        */
+      }
+
       .our-values-1-2-3-flex-container > * {
         width: 300px;
         height: 172px;
         padding: 4rem 1rem 4rem 1rem;
       }
+
+      #learn-more-button {
+        background: var(--light-gray-color);
+        color: var(--black-color);
+        font-weight: 600;
+        border: none;
+      }
+
+      #learn-more-button:hover {
+        background-color: rgb(230,230,230);
+      }
+
+
+      /*.weekly-strategy-report-container*/
+      .weekly-strategy-report-container {
+        width: 1000px;
+
+        margin-top: 5rem;
+      }
+
+      .weekly-strategy-report-1-2-3-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .weekly-strategy-report-1-2-3-container > * {
+        width: 300px;
+        height: 278px;
+        
+        padding: 3rem 1rem 5rem 1rem;
+
+
+      }
+
+
     }
   </style>
 </head>
