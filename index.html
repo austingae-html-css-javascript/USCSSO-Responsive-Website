@@ -186,12 +186,11 @@
 
     /*our-values-container*/
     .our-values-container {
-      width: min(100%, 75rem); /*width equals 100% of its parent width until width = 37.5rem, aka 1200px*/
+      width: min(100%, 62.5rem); /*width equals 100% of its parent width until width = 62.5rem, aka 1000px*/
       margin: 0rem auto 0rem auto;
 
       margin-top: 2rem;
       text-align: center;
-      
     }
 
     #our-values-title {
@@ -490,6 +489,48 @@
 
 
     }
+
+    @media screen and (min-width: 62.5rem) /*1000px*/ {
+      /*.about-us-container*/
+      .about-us-container {
+        width: 900px;
+        margin: 0rem auto 0rem auto;
+      }
+
+      .about-us-video-title-long-description-container {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #about-us-video {
+        width: 30%;
+      }
+
+      #about-us-long-description {
+        width: 500px;
+
+        padding: 1rem 1rem 1rem 1rem;
+
+        line-height: 1.8rem;
+      }
+
+
+      .our-values-1-2-3-flex-container {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+      }
+
+      .our-values-1-2-3-flex-container > * {
+        width: 300px;
+        height: 172px;
+        padding: 4rem 1rem 4rem 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -529,17 +570,19 @@
   <section class="our-values-section">
     <div class="our-values-container">
       <h2 id="our-values-title">Our Values</h2>
-      <div class="our-values-1-container">
-        <h4 class="our-value-header">Nonpartisanship</h4>
-        <p class="our-value-paragraph">USCSSO is a nonpartisan organization in a highly partisan environment focused on delivering unbiased analysis of complex issues in US-China relations.</p>
-      </div>
-      <div class="our-values-2-container">
-        <h4 class="our-value-header">Objectivity</h4>
-        <p class="our-value-paragraph">USCSSO aims to retain consistent objectivity by sourcing research from a wide variety of reputable locations, and refraining from the use of bias in analysis.</p>
-      </div>
-      <div class="our-values-3-container">
-        <h4 class="our-value-header">Student-Led</h4>
-        <p class="our-value-paragraph">USCSSO offers a platform for students to educate and become educated on the US-China relationship, while tailoring content to young professionals.</p>
+      <div class="our-values-1-2-3-flex-container">
+        <div class="our-values-1-container">
+          <h4 class="our-value-header">Nonpartisanship</h4>
+          <p class="our-value-paragraph">USCSSO is a nonpartisan organization in a highly partisan environment focused on delivering unbiased analysis of complex issues in US-China relations.</p>
+        </div>
+        <div class="our-values-2-container">
+          <h4 class="our-value-header">Objectivity</h4>
+          <p class="our-value-paragraph">USCSSO aims to retain consistent objectivity by sourcing research from a wide variety of reputable locations, and refraining from the use of bias in analysis.</p>
+        </div>
+        <div class="our-values-3-container">
+          <h4 class="our-value-header">Student-Led</h4>
+          <p class="our-value-paragraph">USCSSO offers a platform for students to educate and become educated on the US-China relationship, while tailoring content to young professionals.</p>
+        </div>
       </div>
       <button id="learn-more-button">Learn More</button>
     </div>
