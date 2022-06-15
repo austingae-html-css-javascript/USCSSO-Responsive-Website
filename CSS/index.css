@@ -9,7 +9,7 @@
   --light-white-color: rgb(250,250,250);
   --black-color: rgb(43,43,43);
 
-  --facebook-color: rgb(0,40,104);
+  --facebook-color: rgb(64,100,173);
   --linkedin-color: rgb(1,118,181);
   --instagram-color: rgb(247,83,84);
   --twitter-color: rgb(30,155,240);
@@ -97,6 +97,78 @@ img {
 
 .navigation-button:hover {
   color: var(--red-color);
+}
+
+/*Hamburger Menu Page*/
+#hamburger-menu-page {
+  position: fixed;
+  top: -100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  background-color: var(--blue-color);
+}
+
+#x-mark {
+  color: white;
+  position: absolute;
+  top: 16px; 
+  right: 32px;
+}
+
+#x-mark:hover {
+  color: var(--red-color);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hamburger-menu-button {
+  display: block;
+  margin-inline: auto;
+
+  color: var(--light-white-color);
+  background-color: var(--blue-color);
+  border: none;
+
+  margin-bottom: 2rem;
+
+  font-size: 20px;
+}
+
+.hamburger-menu-button:hover {
+  color: var(--red-color);
+}
+
+.hamburger-menu-social-media-icons {
+  text-align: center;
+}
+
+#hamburger-menu-facebook, 
+#hamburger-menu-linkedin, 
+#hamburger-menu-instagram, 
+#hamburger-menu-twitter {
+  color: white;
+}
+
+#hamburger-menu-facebook:hover {
+  color: var(--facebook-color);
+}
+
+#hamburger-menu-linkedin:hover {
+  color: var(--linkedin-color);
+}
+
+#hamburger-menu-instagram:hover {
+  color: var(--instagram-color);
+}
+
+#hamburger-menu-twitter:hover {
+  color: var(--twitter-color);
 }
 
 /*About Us Container*/
