@@ -102,7 +102,7 @@ img {
 /*Hamburger Menu Page*/
 #hamburger-menu-page {
   position: fixed;
-  top: -100%;
+  top: -150%;
   height: 100vh;
   left: 0;
   right: 0;
