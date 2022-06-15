@@ -103,7 +103,7 @@ img {
 #hamburger-menu-page {
   position: fixed;
   top: -150%;
-  height: 100vh;
+  height: 100%;
   left: 0;
   right: 0;
   background-color: var(--blue-color);
