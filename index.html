@@ -15,6 +15,10 @@
 
   <style>
 
+    * {
+      box-sizing: content-box;
+    }
+
     :root {
       --blue-color: rgb(0,40,104);
       --red-color: rgb(255,63,63);
@@ -50,10 +54,12 @@
     /*Navigation Container*/
     .navigation-container {
       width: auto;
-      padding: 1rem 2rem 1rem 1rem;
+      padding: 1rem 2rem 1rem 2rem;
       /* 
       Parent Div's Width = Child Div's Width+Padding+Border+Margin
-      375px = width: auto, so (327px) + (48px) + 0px + 0px
+      768px = width: auto, so (704px) + (32px + 32px) + 0px + 0px
+
+      "Parent Div's Width = Child Div's Width+Padding+Border+Margin" is true. 
       */
 
       display: flex;
@@ -89,10 +95,38 @@
       color: var(--red-color);
     }
 
+    #navigation-buttons-container { /*hide the navigation-buttons-container while screen size is less than 768px*/
+      display: none;
+    }
+
+    .navigation-button {
+      background-color: var(--light-white-color);
+      border: none;
+      font-size: 17px;
+
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .navigation-button-padding-right {
+      padding-right: 20px;
+    }
+
+    .navigation-button:hover {
+      color: var(--red-color);
+    }
+
     /*About Us Container*/
     .about-us-container {
       width: 370px;
       margin: 0rem auto 0rem auto;
+
+      /*
+      Parent Div's Width = Child Div's Width+Padding+Border+Margin
+      505px = 370px + 0px + 0px + margin: 0rem auto 0rem auto, so (67.5px + 67.5px)
+
+      "Parent Div's Width = Child Div's Width+Padding+Border+Margin" is true. 
+      */
 
       margin-top: 1rem;
 
@@ -127,7 +161,12 @@
       width: auto;
       padding: 0.5rem 0rem 0.5rem 0rem;
       margin: 0rem 6rem 0rem 6rem;
-      /*370px = width: auto, so (178px) + (96px + 96px)*/
+      /*
+      Parent Div's Width = Block Element's Width+Padding+Border+Margin
+      370px = width: auto, so (178px) + 0px + 0px + (96px + 96px)
+
+      "Parent Div's Width = Block Element's Width+Padding+Border+Margin" is true. 
+      */
 
       background-color: var(--light-gray-color);
       font-weight: 600;
@@ -235,7 +274,10 @@
       width: auto;
       padding: 0.5rem 0.5rem 0.5rem 0.5rem;
       /*
+      Parent Div's Width = Block Element's Width+Padding+Border+Margin
       350px = width: auto, so (334px) + (8px + 8px) + 0px + 0px
+
+      "Parent Div's Width = Block Element's Width+Padding+Border+Margin" is true. 
       */
       border-top-right-radius: 1rem;
       border-top-left-radius: 1rem;
@@ -290,6 +332,7 @@
     .social-media-container {
       width: 370px;
       margin: 0rem auto 0rem auto;
+      margin-bottom: 1rem;
 
       text-align: center;
     }
@@ -342,6 +385,18 @@
     .fa-instagram {
       margin-right: 1rem;
     }
+
+
+
+    @media screen and (min-width: 48rem) /*768px*/ {
+      #hamburger-logo { /*when screen size > 768px, hide #hamburger-logo*/
+        display: none;
+      }
+
+      #navigation-buttons-container { /*when screen size > 768px, show #navigation-buttons-container*/
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -353,6 +408,12 @@
       </div>
 
       <i id="hamburger-logo" class="fa-solid fa-bars fa-xl"></i>
+      <div id="navigation-buttons-container">
+        <button class="navigation-button navigation-button-padding-right">HOME</button>
+        <button class="navigation-button navigation-button-padding-right">EVENTS</button>
+        <button class="navigation-button navigation-button-padding-right">OUR WORK</button>
+        <button class="navigation-button">ABOUT</button>
+      </div>
     </div>
   </nav>
 
@@ -430,9 +491,18 @@
 <!--
   1) Mobile First Approach - Yes. 
   2) Create the HTML layout - Yes. 
+  - 
+  <section>
+    <div class="container">
+    </div>
+  </section>
   3) Create the HTML elements - Yes. 
   4) Decorate the HTML elements
-  - Parent Div's Width = Child Div's Width+Padding+Border+Margin
-  - Parent Div's Width = Block Element's Width+Padding+Border+Margin
-  - However, Parent Div's Width != Inline Element's Width+Padding+Border+Margin
+    1) Imagine how you want it to look like.
+    2) Then use width, padding, border, and margin.
+    3) Then calculate: 
+        If * {box-sizing: content-box}
+        - Parent Div's Width = Child Div's Width+Padding+Border+Margin
+        - Parent Div's Width = Block Element's Width+Padding+Border+Margin
+        - However, Parent Div's Width != Inline Element's Width+Padding+Border+Margin
 -->
