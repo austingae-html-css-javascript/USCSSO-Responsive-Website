@@ -34,6 +34,10 @@ img {
   width: 50px;
 }
 
+button, i {
+  cursor: pointer;
+}
+
 /*Navigation Container*/
 .navigation-container {
   width: auto;
@@ -109,7 +113,7 @@ img {
 #hamburger-menu-page {
   position: fixed;
   top: -100%;
-  height: 100vh;
+  height: 200px;
   left: 0;
   right: 0;
   background-color: var(--blue-color);
