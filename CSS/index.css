@@ -74,6 +74,12 @@ img {
   width: 40px;
 }
 
+#hamburger-logo-button {
+  padding: 0px; 
+  border: none; 
+  background-color: var(--light-white-color); 
+  cursor: pointer;
+}
 #hamburger-logo {
   color: var(--red-color);
 }
@@ -102,8 +108,8 @@ img {
 /*Hamburger Menu Page*/
 #hamburger-menu-page {
   position: fixed;
-  top: -150%;
-  height: 100%;
+  top: -100%;
+  height: 100vh;
   left: 0;
   right: 0;
   background-color: var(--blue-color);
