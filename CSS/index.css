@@ -1,0 +1,571 @@
+* {
+  box-sizing: content-box;
+}
+
+:root {
+  --blue-color: rgb(0,40,104);
+  --red-color: rgb(255,63,63);
+  --light-gray-color: rgb(213,213,213);
+  --light-white-color: rgb(250,250,250);
+  --black-color: rgb(43,43,43);
+
+  --facebook-color: rgb(0,40,104);
+  --linkedin-color: rgb(1,118,181);
+  --instagram-color: rgb(247,83,84);
+  --twitter-color: rgb(30,155,240);
+
+  --primary-font: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+img {
+  width: 50px;
+}
+
+/*Navigation Container*/
+.navigation-container {
+  width: auto;
+  padding: 1rem 2rem 1rem 2rem;
+  /* 
+  Parent Div's Width = Child Div's Width+Padding+Border+Margin
+  768px = width: auto, so (704px) + (32px + 32px) + 0px + 0px
+
+  "Parent Div's Width = Child Div's Width+Padding+Border+Margin" is true. 
+  */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--light-white-color);
+
+  border-bottom-style: solid;
+  border-bottom-color: var(--blue-color);
+  border-bottom-width: 0.3rem;
+  
+}
+
+.website-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#uscsso-title {
+  font-size: 27px;
+  color: var(--blue-color);
+  font-weight: 400;
+}
+
+#uscsso-logo {
+  width: 40px;
+}
+
+#hamburger-logo {
+  color: var(--red-color);
+}
+
+#navigation-buttons-container { /*hide the navigation-buttons-container while screen size is less than 768px*/
+  display: none;
+}
+
+.navigation-button {
+  background-color: var(--light-white-color);
+  border: none;
+  font-size: 17px;
+
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navigation-button-padding-right {
+  padding-right: 20px;
+}
+
+.navigation-button:hover {
+  color: var(--red-color);
+}
+
+/*About Us Container*/
+.about-us-container {
+  width: 370px;
+  margin: 0rem auto 0rem auto;
+
+  /*
+  Parent Div's Width = Child Div's Width+Padding+Border+Margin
+  505px = 370px + 0px + 0px + margin: 0rem auto 0rem auto, so (67.5px + 67.5px)
+
+  "Parent Div's Width = Child Div's Width+Padding+Border+Margin" is true. 
+  */
+
+  margin-top: 1rem;
+
+  text-align: center;
+}
+
+#us-china {
+  color: var(--blue-color);
+  font-size: 30px;
+}
+#strategic-studies-org {
+  color: var(--blue-color);
+  font-weight: 400;
+  font-size: 28px;
+}
+#org-short-description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3rem;
+
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+#about-us-video {
+  width: 90%;
+
+  margin-bottom: 1rem;
+}
+
+#about-us-title {
+  width: auto;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  margin: 0rem 6rem 0rem 6rem;
+  /*
+  Parent Div's Width = Block Element's Width+Padding+Border+Margin
+  370px = width: auto, so (178px) + 0px + 0px + (96px + 96px)
+
+  "Parent Div's Width = Block Element's Width+Padding+Border+Margin" is true. 
+  */
+
+  background-color: var(--light-gray-color);
+  font-weight: 600;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+#about-us-long-description {
+  padding: 0.5rem 1rem 1rem 1rem;
+
+  color: var(--light-white-color);
+  background-color: var(--red-color);
+  line-height: 1.5rem;
+  font-size: 14px;
+  border-radius: 0.5rem;
+}
+
+/*our-values-container*/
+.our-values-container {
+  width: min(100%, 62.5rem); /*width equals 100% of its parent width until width = 62.5rem, aka 1000px*/
+  margin: 0rem auto 0rem auto;
+
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#our-values-title {
+  width: auto;
+  margin: 0rem 7rem 0rem 7rem;
+  /*375px = width: auto, so (151px) + 0px + 0px + 224px*/
+
+  padding: 0.5rem 0rem 0.5rem 0rem;
+
+  font-weight: 600;
+  background-color: var(--light-gray-color);
+
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.our-values-1-container {
+  color: var(--light-white-color);
+  background-color: var(--blue-color);
+
+  padding: 1rem 1rem 1rem 1rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.our-values-2-container {
+  color: var(--light-white-color);
+  background-color: var(--red-color);
+  padding: 1rem 1rem 1rem 1rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.our-values-3-container {
+  color: var(--light-white-color);
+  background-color: var(--blue-color);
+  padding: 1rem 1rem 1rem 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.our-value-header {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 1rem;
+}
+
+.our-value-paragraph {
+  font-size: 14px;
+  line-height: 1.3rem;
+}
+
+#learn-more-button {
+  color: var(--light-white-color);
+  background-color: var(--red-color);
+  border-style: solid;
+  border-color: var(--red-color);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+#learn-more-button:hover {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+/*weekly-strategy-report-container*/
+.weekly-strategy-report-container {
+  width: 350px;
+  margin: 0rem auto 0rem auto;
+  /*
+  375px = 370px + margin: 0rem auto 0rem auto, so (2.5px + 2.5px)
+  */
+
+  margin-top: 3rem;
+}
+
+#weekly-strategy-report-title {
+  width: auto;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  /*
+  Parent Div's Width = Block Element's Width+Padding+Border+Margin
+  350px = width: auto, so (334px) + (8px + 8px) + 0px + 0px
+
+  "Parent Div's Width = Block Element's Width+Padding+Border+Margin" is true. 
+  */
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--light-gray-color);
+
+  font-size: 20px;
+}
+
+.weekly-strategy-report-1,
+.weekly-strategy-report-2,
+.weekly-strategy-report-3 {
+  background-color: var(--black-color);
+  color: var(--light-white-color);
+
+  width: auto;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.weekly-strategy-report-1,
+.weekly-strategy-report-2 {
+  margin-bottom: 1rem;
+}
+
+.weekly-report-image {
+  display: block;
+  width: 70%;
+  margin: 0rem auto 0rem auto;
+
+  margin-bottom: 1rem;
+}
+
+.weekly-report-heading {
+  width: auto;
+  padding: 0rem 1rem 0rem 1rem;
+
+  
+  margin-bottom: 0.8rem;
+}
+
+.weekly-report-author {
+  width: auto;
+  padding: 0rem 1rem 0rem 1rem;
+  /*334px = width: auto, so (302px) + (16px + 16px) + 0px + 0px*/
+
+  font-size: 12px;
+}
+
+/*social media container*/
+.social-media-container {
+  width: 370px;
+  margin: 0rem auto 0rem auto;
+  margin-bottom: 1rem;
+
+  text-align: center;
+}
+
+#subscribe-title {
+  color: var(--blue-color);
+  font-size: 20px;
+
+  margin-top: 1.5rem;
+}
+
+#subscribe-button {
+  color: var(--light-white-color);
+  background-color: var(--red-color);
+  border-style: solid;
+  border-color: var(--red-color);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+
+  margin-top: 0.5rem;
+}
+
+#subscribe-button:hover {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.social-media-icons-container {
+  margin-top: 1rem;
+}
+
+.fa-facebook {
+  color: var(--facebook-color);
+}
+
+.fa-linkedin {
+  color: var(--linkedin-color);
+}
+
+.fa-instagram {
+  color: var(--instagram-color);
+}
+
+.fa-twitter {
+  color: var(--twitter-color);
+}
+
+.fa-facebook, 
+.fa-linkedin,
+.fa-instagram {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 48rem) /*768px*/ {
+  /*.navigation-container*/
+  #hamburger-logo { /*when screen size > 768px, hide #hamburger-logo*/
+    display: none;
+  }
+
+  #navigation-buttons-container { /*when screen size > 768px, show #navigation-buttons-container*/
+    display: flex;
+  }
+
+  /*.about-us-container*/
+
+  .about-us-container {
+  width: 650px;
+  margin: 0rem auto 0rem auto;
+  /*
+  Parent Div's Width = Child Div's Width + Padding + Border + Margin
+  768px = 650 + 0px + 0px + (59px + 59px)
+  */
+
+  margin-top: 1rem;
+}
+
+  #us-china {
+    font-size: 40px;
+  }
+
+  #strategic-studies-org {
+    font-size: 35px;
+  }
+
+  #org-short-description {
+    font-size: 20px;
+  }
+
+  #about-us-title {
+    font-size: 30px;
+  }
+
+  #about-us-long-description {
+    font-size: 17px;
+    width: auto;
+    padding: 2rem 2rem 2rem 2rem;
+    line-height: 2rem;
+
+    /*
+    Parent Div's Width = Block Element's Width + Padding + Border + Margin
+    650px = width: auto, so (586px) + (32px + 32px) + 0px + 0px
+    */
+  }
+
+  /*.our-values-container*/
+  #our-values-title {
+    font-size: 30px;
+  }
+
+  .our-values-1-container,
+  .our-values-2-container,
+  .our-values-3-container {
+    padding: 3rem 3rem 3rem 3rem;
+
+    /*
+    Parent Div's Width = Child Div's Width + Padding + Border + Margin
+    768px = width: auto, so (672px) + (48px + 48px) + 0px + 0px
+    */
+  }
+
+  .our-value-header {
+    font-size: 23px;
+  }
+
+  .our-value-paragraph {
+    font-size: 17px;
+    line-height: 1.5rem;
+  }
+
+  .weekly-strategy-report-container {
+    width: 650px;
+  }
+
+  #weekly-strategy-report-title {
+    font-size: 30px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+
+  .weekly-strategy-report-1,
+  .weekly-strategy-report-2,
+  .weekly-strategy-report-3 {
+    padding: 1rem 4rem 1rem 4rem;
+  }
+
+  .weekly-report-heading {
+    font-size: 20px;
+  }
+
+  .weekly-report-author {
+    font-size: 15px;
+  }
+
+  #learn-more-button {
+    font-size: 20px;
+  }
+  
+
+
+}
+
+@media screen and (min-width: 62.5rem) /*1000px*/ {
+  /*.about-us-container*/
+  .about-us-container {
+    width: 900px;
+    margin: 0rem auto 0rem auto;
+    /*
+    Parent Div's Width = Child Div's Width + Padding + Border + Margin
+    1000px = 900px + 0px + 0px + margin: 0rem auto 0rem auto, so (50px + 50px)
+    */
+
+    margin-top: 1rem;
+  }
+
+  .about-us-video-title-long-description-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+  }
+
+  #about-us-video {
+    width: 30%;
+  }
+
+  #about-us-long-description {
+    width: 500px;
+
+    padding: 1rem 1rem 1rem 1rem;
+
+    line-height: 1.8rem;
+  }
+
+  /*.our-values-container*/
+
+  .our-values-container {
+    margin-top: 5rem;
+  }
+  .our-values-1-2-3-flex-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  #our-values-title {
+    width: 332px;
+    margin: 0rem auto 0rem auto;
+    /* 
+    Parent Div's Width = Block Element's Width + Padding + Border + Margin
+    1000px = 332px + 0px + 0px + margin: 0rem auto 0rem auto, so (334px + 334px) 
+    */
+  }
+
+  .our-values-1-2-3-flex-container > * {
+    width: 300px;
+    height: 172px;
+    padding: 4rem 1rem 4rem 1rem;
+  }
+
+  #learn-more-button {
+    background: var(--light-gray-color);
+    color: var(--black-color);
+    font-weight: 600;
+    border: none;
+  }
+
+  #learn-more-button:hover {
+    background-color: rgb(230,230,230);
+  }
+
+
+  /*.weekly-strategy-report-container*/
+  .weekly-strategy-report-container {
+    width: 1000px;
+
+    margin-top: 5rem;
+  }
+
+  .weekly-strategy-report-1-2-3-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .weekly-strategy-report-1-2-3-container > * {
+    width: 300px;
+    height: 278px;
+    
+    padding: 3rem 1rem 5rem 1rem;
+  }
+}
