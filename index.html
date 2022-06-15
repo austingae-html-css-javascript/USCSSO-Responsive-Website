@@ -389,6 +389,7 @@
 
 
     @media screen and (min-width: 48rem) /*768px*/ {
+      /*.navigation-container*/
       #hamburger-logo { /*when screen size > 768px, hide #hamburger-logo*/
         display: none;
       }
@@ -396,6 +397,8 @@
       #navigation-buttons-container { /*when screen size > 768px, show #navigation-buttons-container*/
         display: flex;
       }
+
+      /*.about-us-container*/
 
       .about-us-container {
       width: 650px;
@@ -423,17 +426,44 @@
       }
 
       #about-us-long-description {
-        font-size: 20px;
-        padding: 2rem 0rem 2rem 0rem;
-        line-height: 35px;
+        font-size: 17px;
+        width: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        line-height: 2rem;
+
+        /*
+        Parent Div's Width = Block Element's Width + Padding + Border + Margin
+        650px = width: auto, so (586px) + (32px + 32px) + 0px + 0px
+        */
       }
+
+      /*.our-values-container*/
+      #our-values-title {
+        font-size: 30px;
+      }
+
+      .our-values-1-container,
+      .our-values-2-container,
+      .our-values-3-container {
+        padding: 3rem 3rem 3rem 3rem;
+
+        /*
+        Parent Div's Width = Child Div's Width + Padding + Border + Margin
+        768px = width: auto, so (672px) + (48px + 48px) + 0px + 0px
+        */
+      }
+
+      .our-value-header {
+        font-size: 23px;
+      }
+
+      .our-value-paragraph {
+        font-size: 17px;
+        line-height: 1.5rem;
+      }
+
+
     }
-
-
-
-    
-
-
   </style>
 </head>
 <body>
